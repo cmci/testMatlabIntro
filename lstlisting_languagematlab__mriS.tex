@@ -1,0 +1,16 @@
+\begin{lstlisting}[language=matlab]
+>> mriStack2 = reshape( mriStack, [226 186 1 27]);
+>> whos mriStack*
+  Name             Size                  Bytes  Class    Attributes
+
+  mriStack       226x186x27            1134972  uint8              
+  mriStack2        4-D                 1134972  uint8 
+> size(mriStack2)
+
+ans =
+
+   226   186     1    27
+>> map = colormap('bone');
+>> montage(mriStack2, map, 'size', [3 9])
+
+\end{lstlisting}

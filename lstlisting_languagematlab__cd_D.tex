@@ -1,0 +1,10 @@
+\begin{lstlisting}[language=matlab]
+>> cd ~/Desktop
+>> myBlobs = imread( 'blobs.tif' );
+>> figure(1); clf
+>> imshow( myBlobs )
+>> figure(2); clf
+>> imshow( myBlobs , 'displayrange', [10 200], ...
+'initialmagnification', 'fit' )
+
+\end{lstlisting}

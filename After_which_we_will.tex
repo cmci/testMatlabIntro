@@ -1,0 +1,66 @@
+After which we will have a vector of length ten holding the MSD for time-lags one through ten.
+If the physical time-units are non-integers you simply plot MSD against these, do not try to address non-integer positions in a vector or matrix, they do not exist. This will become clear the first time you try it.
+
+To build some further intuition for how the MSD behaves, let us calculate it for a couple of typical motion patterns.
+
+\subsection{MSD --- linear  motion}
+By linear motion we mean
+\be
+  x(t) = v t \e,
+\ee
+where $v$ is a constant velocity and $t$ is time.
+That is, the particle was at position zero at time zero, $x(t=0)=0$, and moves to the right with constant speed.
+The MSD then becomes
+\be
+  \msd(\tau) = \la \left[ vt + v\tau - vt \right]^2 \ra = v^2 \tau^2 \e,
+\ee
+i.e., the MSD grows with the square of the time-lag $\tau$. In a double-logarithmic (log-log) plot, the MSD would show as a straight line of slope 2 when plotted against the time-lag $\tau$:
+\be
+  \log\msd(\tau) = \log v^2 + 2 \log \tau 
+\ee
+
+\subsection{MSD --- Brownian motion}
+By Brownian motion we mean
+\be
+  \dot{x}(t) = a\eta(t) \e,
+\ee
+where $\dot{}$ means differentiation wrt.\ time, $a = \sqrt{2D}$, $D$ is the diffusion coefficient and $\eta$ is a normalised, Gaussian distributed, white noise
+\be
+  \la\eta(t) \ra =0 ,\,\,\,\, \la \eta(t) \eta(t') \ra = \delta( t- t' )\e.
+\ee
+See Wikipedia for illustration:\\
+\url{https://en.wikipedia.org/wiki/Brownian_motion}
+
+With this equation of motion we can again directly calculate the MSD:
+\bea
+  \msd(\tau) &=& \la \left[ \int_{-\infty}^{t+\tau} \dd t' \dot{x}(t') -  \int_{-\infty}^{t} \dd t' \dot{x}(t')\right]^2 \ra \\
+&=& a^2 \, \tau = 2 D \,\tau \e,
+\eea
+a result that should be familiar to some of you. 
+Apart from prefactors, that we do not care about here, the crucial difference is that the MSD now grows linearly with the time-lag $\tau$, and in a log-log plot it would hence be a straight line with slope one when plotted against $\tau$.
+
+We are much more interested in the mathematical properties of this motion than in the actual thermal self-diffusion coefficient $D$: The temporal dynamics of this equation can be used to model systems that move randomly, even if not driven by thermal agitation.  So, when we say Brownian motion, from now on, we mean the mathematical definition, not the physical phenomenon.
+
+For those interested in some mathematical details, Brownian motion can be described via the Wiener process $W$, with the white noise being the time-derivative of the Wiener process $\eta = \dot{W}$. 
+The Wiener process is a continuous-time stochastic process and is one of the best known examples of the broader class of Lev\'{y} processes that can have some very interesting characteristics such as infinite variance and power-law distributed step-sizes. 
+These processes come up naturally in the study of the field of distributions, something you can think of as being a generalization of ordinary mathematical functions, and also requires an extension of normal calculus to what is known as It\^{o} calculus. If you are into mathematical finance or stochastic differential equations you will know all of this already.
+
+\subsection{MSD --- averaged over many tracks}
+To start quantifying the motion of multiple tracks, we first calculate the mean-squared-displacement for individual tracks
+\be
+   \msd_{j,n} = \frac{1}{M_n - j} \sum_{i=1+j}^{M_n} 
+   \left(  (x_i - x_{i-j})^2 + (y_i - y_{i-j})^2 \right)    \e,
+\ee
+$j=1,2,\ldots,M_n -1$ is the time-lag and $M_n$ is the number of positions determined for track $n$.
+Notice, that we use a sliding window so that the $M_n-j$ determinations of the MSDs at time-lag $j\dt$ are not independent; this is known as over-sampling and trades independence for smaller error-bars \cite{Wang:2007book}.
+
+The weighted population average is
+\be
+	\MSD_j = \frac{ 1 }{ \sum_{n} (M_n - j ) }\, \sum_{n} (M_n - j)\, \msd_{j,n} \e,
+\ee
+where the sums extend over all time-series with $M_n > j$.  Here, the weights are chosen as the number of intervals that was used to calculate the MSD for a given time-lag and track.
+
+\subsection{Further reading about diffusion, the MSD,  and power-laws}
+Papers dealing with calculation of the MSD: \cite{Qian:1991}, under conditions with noise \cite{Michalet:2010}, theoretical expressions for several generic dynamics cases (free diffusion, confined diffusion, persistent motion both free and confined) \cite{Norrelykke:2011}.
+Determining diffusion coefficients when this or that moves or not, this is an entire PhD thesis compressed to one long paper \cite{Vestergaard:2014}.
+How to fit a power-law correctly and what can happen if you do it wrong like everybody else, an absolute must-read \cite{Clauset:2009}.

@@ -1,0 +1,16 @@
+\begin{lstlisting}[language=matlab]
+>> mriImage = imread( 'mri-stack.tif', 'index', 7 );
+>> imshow(mriImage)
+>> mriStack( : , : , 7 ) = imread( 'mri-stack.tif', 'index', 7 );
+>> for imageNumber = 1 : 27 
+mriStack( : , : , imageNumber ) = imread( 'mri-stack.tif', 'index', imageNumber );
+end
+>> whos
+  Name               Size                  Bytes  Class     Attributes
+
+  imageNumber        1x1                       8  double              
+  mriImage         226x186                 42036  uint8               
+  mriStack         226x186x27            1134972  uint8  
+>> implay(mriStack)
+
+\end{lstlisting}

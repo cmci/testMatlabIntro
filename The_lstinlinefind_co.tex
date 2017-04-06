@@ -1,0 +1,22 @@
+The \lstinline{find} command is very useful for data-wrangling and thresholding. 
+Combined with the query command \lstinline{isNaN} (asking if something ``is not-a-number'') you will  certainly find yourself applying it once working with real-world data.
+
+\subsection{Investigating how ``speed'' depends on subsampling or $dt$}
+After having carefully examined the steps and trajectories we may get the  idea of also looking into the velocities and their sizes (speeds).
+Velocities can be calculated from positions by differentiation wrt.\ time.
+Since we have a discrete time-series, we do that by forming the difference and dividing by the time-interval $dt$ --- this is what we did above with the help of the \lstinline{diff} command.
+
+And this is where it gets interesting: When we vary $dt$, our estimate of the speed also changes!
+Does this make sense?
+Take a minute to think about it: What we are finding is that, depending on how often we determine the position of a diffusive particle, the estimated speed varies. 
+Would you expect the same behavior for a car or a plane?
+Ok, if this has you a little confused you actually used to be in good company, that is, until Einstein explained what is really going on, back in 1905 --- you might know the story.
+
+The take-home message is that speed is ill-defined as a measure for Brownian motion.
+If you are wondering what we can use instead, read on, the next section, on the mean-squared-displacement, has you covered.
+
+\subsection{Simulating confined Brownian motion}
+Brownian motion doesn't have to be free. The observed particle could be trapped in a small volume or elastically tethered to a fixed point. 
+To be specific, let us choose as physical example a sub-micron sized bead in an optical trap, in water.
+This turns out to be just as easy to simulate as pure Brownian motion.
+Writing down the equations of motion and solving them (or using intuition) we see that the observed positions are simply given by random numbers from a Gaussian distribution.  The width of the distribution is determined by the strength of the trap (size of the confinement, stiffness of tether).  Importantly, we are not sampling the position of this bead very often, only every millisecond or so, rarely enough that it has time to ``relax'' in the trap between each determination.

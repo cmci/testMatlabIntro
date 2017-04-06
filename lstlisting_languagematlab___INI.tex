@@ -1,0 +1,10 @@
+\begin{lstlisting}[language=matlab]
+%% --- INITIALIZE ---
+dt = 1;  % time between recordings
+t  = 0 : dt : 1000 * dt; % time
+v  = 7;  % constant translation speed
+
+%% --- GENERATE POSITIONS ---
+xPos = v*t + randn( 1, sampleNumber ); % position of bead in trap
+
+\end{lstlisting}

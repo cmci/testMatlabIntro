@@ -1,0 +1,19 @@
+When addressing an element by name, you can reduce typing by hitting the TAB-key after entering \lstinline{blobInfo.} --- this will display all the field-names in the structure.
+
+It is important to realize that \lstinline{imread} will behave different for different image formats.
+For example, the tiff format used here supports the reading of specific images from a stack via the \lstinline{'index'} input argument (illustrated below) and extraction of pixel regions via the \lstinline{'pixelregion'} input argument. The latter is very useful when images are large or many as it can speed up processing not having to read the entire image image into memory.
+On the other hand, jpeg2000 supports \lstinline{'pixelregion'} and \lstinline{'reductionlevel'}, but not \lstinline{'index'}.
+
+\subsection{Reading and displaying an image-stack}
+Taking one step up in complexity we will now work with a stack of tiff-files instead.
+These are the steps we will go through
+
+\begin{enumerate}
+\item Open ``MRI Stack (528K)'' in ImageJ (File > Open Samples)
+\item Save the stack to your desktop, or some other place where you can find it (File > Save)
+\item Load a single image from the stack into a two-dimensional variable
+\item Load a multiple images from the stack into a three-dimensional variable
+\item Browse through the stack using the \lstinline{implay} command
+\item Create a montage of all the images using the \lstinline{montage} command
+\end{enumerate}
+After performing the first two steps in ImageJ, we switch to MATLAB:

@@ -1,0 +1,6 @@
+\begin{lstlisting}[language=matlab]
+>> blobs_perimeter = bwperim( blobs_bw );
+>> blobs_summed = blobs_inv  + uint8(blobs_perimeter) * 255;
+>> figure(4); imshow( blobs_summed , 'initialmagnification', 'fit' )
+
+\end{lstlisting}

@@ -1,0 +1,6 @@
+\begin{lstlisting}[language=matlab]
+>> stats = regionprops( blobs_bw, {'area' 'perimeter' 'centroid'} );
+>> centroids = cat(1, stats.Centroid );
+>> figure(4); hold on; plot(centroids(:,1) , centroids(:,2), '*r')
+
+\end{lstlisting}

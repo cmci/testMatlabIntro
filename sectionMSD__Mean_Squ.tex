@@ -1,0 +1,13 @@
+\section{MSD --- Mean Square Displacement}
+Motivated by the shortcomings of the speed as a measure for motion, we try our hands at another measure.
+This measure, while a bit more involved, does not suffer the same problems as the speed but takes a little getting used to. Without further ado:
+
+The mean square displacement for a one-dimensional time-series $x(t)$, sampled continuously, is defined as
+\be
+    \msd(\tau) \equiv \la \left[ x(t+\tau) - x(t) \right]^2 \ra_t \e,
+\ee
+where $\la \cdot \ra_t$ is the expectation value of the content, with respect to $t$ --- think of it as the average over all time-points.
+What it measures is how far a particle has moved, in an average sense, in a time-interval of size $\tau$.
+
+Figure~\ref{fig:OT_MSD} shows theoretical and simulated results for the MSD for three different types of motion:
+1) Brownian motion (free diffusion); 2) Brownian motion in an optical trap (confined diffusion); and 3) Random motion with finite persistence (Ornstein-Uhlenbeck process)

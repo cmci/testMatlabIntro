@@ -1,0 +1,185 @@
+
+\iflatexml
+\documentclass[11pt,a4paper,oneside]{report}
+\fi
+
+% \usepackage[]{mathpazo} % Not (yet) supported by LaTeXML.
+ % math & rm
+\linespread{1.05}        % Palatino needs more leading (space between lines)
+% \usepackage[scaled]{helvet} % Not (yet) supported by LaTeXML.
+ % ss
+% \usepackage[]{courier} % Not (yet) supported by LaTeXML.
+ % tt
+\normalfont
+% \usepackage[T1]{fontenc} % Not (yet) supported by LaTeXML.
+
+\usepackage[footnotesize]{caption}
+
+\usepackage[]{subfig}
+\linespread{1.05}         % Palatino needs more leading (space between lines)
+\parskip7.2pt
+\usepackage[]{setspace}
+
+\onehalfspacing
+\usepackage[]{framed}
+\usepackage[]{pdfsync}
+\setlength{\parindent}{0in} % avoids indent at the beginning of paragraph
+\usepackage[]{url}
+ % omitted, as this will just show url in different font
+\usepackage[pdftex]{graphicx}
+\usepackage[]{color}
+
+\definecolor{gray09}{rgb}{0.9,0.9,0.9}  %background for codes
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{lightblue}{rgb}{0,0.8,1}
+\definecolor{Dark}{gray}{.2}
+\definecolor{Medium}{gray}{.6}
+\definecolor{Light}{gray}{.8}
+\definecolor{shadecolor}{rgb}{0.9, 0.9, 1}
+% \usepackage[]{epstopdf} % Not (yet) supported by LaTeXML.
+\newcommand{\be}[][]{\begin{equation}}
+
+\newcommand{\ee}[][]{\end{equation}}
+
+\newcommand{\bea}[][]{\begin{eqnarray}}
+
+\newcommand{\eea}[][]{\end{eqnarray}}
+
+\newcommand{\e}[][]{\enspace}
+\newcommand{\la}[][]{\langle}
+
+\newcommand{\ra}[][]{\rangle}
+\newcommand{\dd}[][]{\mathrm{d}}
+	%  normal d for differentials and integrals
+\newcommand{\dt}[][]{\Delta t}
+	% time between position measurements 
+\newcommand{\msd}[][]{{\rm msd}}
+	% MSD for single cell, "over-sampled"
+\newcommand{\MSD}[][]{{\rm MSD}}
+	% population averaged MSD
+\usepackage[]{natbib}
+
+\bibpunct{(}{)}{;}{a}{,}{,}
+\usepackage[]{hyperref}
+
+\hypersetup{colorlinks=true, 
+    citecolor=blue, 
+	linkcolor=black, 
+	urlcolor=blue}
+\usepackage[]{fancyhdr}
+
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1][]{\markboth{#1}{}}
+
+\renewcommand{\sectionmark}[1][]{\markright{\thesection\ #1}{}}
+\lhead{\fancyplain{}{\textit{BIAS2016}}}
+\chead{}
+\rhead{\fancyplain{}{\textit{\rightmark}}}
+\lfoot{}
+\cfoot{\fancyplain{}{\thepage}}
+\rfoot{}
+\newenvironment{indentexercise}[1]%
+{{\setlength{\leftmargin}{2em}}%
+\textbf{Exercise \thesubsection-#1}
+\begin{list}
+{}% 
+	\item%
+}
+{\end{list}
+}
+\newenvironment{indentFiji}%
+{\begin{list}{}%
+         {\setlength{\leftmargin}{1em}}%
+         \item[]%
+}
+{\end{list}}
+\newenvironment{indentCom}%
+{\begin{list}{}%
+         {\setlength{\leftmargin}{1em}}%
+         \item[]%
+}
+{\end{list}}
+\newcommand{\ijmenu}[1][]{\texttt{\small#1}}
+\newcommand{\ilcom}[1][]{\texttt{\small#1}}
+\newcommand{\tab}[][]{\hspace*{3em}}
+\newcommand{\HRule}[][]{\rule{\linewidth}{0.5mm}}
+% \usepackage[]{textcomp} % Not (yet) supported by LaTeXML.
+
+\newcommand*{\micro}[][]{\textmu}
+\usepackage[]{alltt}
+\usepackage[]{listings}
+\lstset{ 
+basicstyle=\small\ttfamily, % larger than above
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1 each line 
+                                numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{gray09},  % choose the background color. You must add %\usepackage{color}
+keywordstyle=\textbf, 	%added
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...},            % if you want to add more keywords to the set
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+}
+\newcommand*{\titleTH}[][]{\begingroup% T&H Typography
+\raggedleft
+
+% --- text above line ---
+%\textsc{\textbf{\Large{\textcolor{blue}{Bias2014} \hfill \textcolor{red}{Module 3}}}} %sfn
+\textsc{\textbf{\Large{Bias2016 \hfill Module 5}}} %kota
+\HRule\\
+\vspace*{\baselineskip}
+
+
+% --- authors ---
+\hfill \textsc{{\large Author:}}\\
+[0.3\baselineskip]
+
+\hfill {\Large Simon F. N\o rrelykke}\\
+{\small ScopeM, ETH Z\"{u}rich}\\
+%[0.167\textheight]
+\vfill
+
+
+%\begin{center}
+% --- title of module ---
+{\textcolor{Medium}{\Huge Introduction to Matlab }}\\
+[2\baselineskip]
+
+% --- name, date, and place of the course --- 
+{\bfseries BIAS2016 BioImage Data Analysis Course}\\
+\textbf{EMBL Heidelberg}\\
+\textbf{5--11 June 2016}
+%\end{center}
+
+\vfill
+
+% --- reviewers/teachers ---
+%{\Large Centre for Molecular \& Cellular Imaging\\EMBL Heidelberg\\\plogo}\par
+%\hfill\textsc{\underline{Reviewers/Teachers:}}\\
+\hfill\textsc{Reviewers/Teachers:}\\
+[0.3\baselineskip]
+{\large \hfill Perrine Paul-Gilloteaux}\\
+{\small \hfill CNRS University of Nantes}\\
+%\vspace*{3\baselineskip}
+%\par
+%{\small Reviewer: }\par
+%{\Large EMBL Heidelberg, IRB Barcelona}\par
+%\includegraphics[width=0.15\textwidth]{fig/rgb_logo_2006_win.eps} 
+%\includegraphics[width=0.07\textwidth]{fig/Icon30pedge.jpg}\\[1cm] 
+\HRule\\
+
+% --- text below line ---
+{\small \hfill\textcolor{Medium}{ Compiled on: \today }}
+\endgroup}

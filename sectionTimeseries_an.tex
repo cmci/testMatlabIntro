@@ -1,0 +1,14 @@
+\section{Time-series analysis}
+MATLAB has a dedicated data type called simply \lstinline{timeseries}.
+We shall not be using this class here as it is too specialized for what we want to do.
+At a later stage in your research you might find it useful, but be warned that is was developed probably more with the financial sector in mind and may not support quite the kind of analysis you need to perform.
+
+Whether or not you actually have a time-series or simply an ordered list of data often does not matter. Many of the tools are the same but were indeed developed by people doing signal-processing for, e.g., telephone companies, i.e., they worked on actual time-series data.
+
+NB: As the operations are getting more complex, We will be working almost exclusively in the editor from now on.
+
+\subsection{Simulating a time-series of Brownian motion (random walk)}
+Physical example: Diffusing molecule or bead.
+A particle undergoing Brownian motion is essentially performing a random walk: In one dimension, each step is equally likely to be to the right or left.  If, in addition, we make the size of the step follow a Gaussian distribution, we essentially have Brownian motion in 1D, also known as diffusion.
+
+The code for generating the random numbers goes something like this:

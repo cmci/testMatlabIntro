@@ -1,0 +1,34 @@
+\section{Appendix: MATLAB Fundamental Data Classes}
+All data stored in MATLAB has an associated class.
+Some of these classes have obvious names and meanings while others are more involved, e.g. the number \lstinline{12} is an integer, whereas the number \lstinline{12.345} is not (it is a \lstinline{double}), and the data-set 
+\verb={12, 'Einstein', 7+6i, [1 2 ; 3 4] }= 
+is of the class \lstinline{cell}.
+\href{http://ch.mathworks.com/videos/introducing-matlab-fundamental-classes-data-types-101503.html}{A short video (5min) about MATLAB fundamental classes and data types.}
+
+Here are some of the classes that we will be using, sometimes without needing to know it, and some that we won't:
+
+\begin{description}
+\item [single, double] 32 and 64 bit floating number, e.g. \lstinline{1'234.567} or \lstinline{-0.000001234}. \lstinline{double} is the default.
+\item [int8/16/32/64, uint8/16/32/64] (unsigned-)integers of 8/16/32/64 bit size, e.g. \lstinline{-2} or \lstinline{127}
+\item [logical] Boolean/binary values. Possible values are \lstinline{TRUE, FALSE} shown as \lstinline{1,0} 
+\item [char] characters and strings (largely the same thing), e.g. \lstinline{'hello world!'}. Character arrays are possible (all rows must be of equal length) and are different from cell arrays of characters.
+\item [cell] cell arrays. For storing heterogeneous data of varying types and sizes. Very flexible. Great potential for confusion. You can have cells nested within cells, nested within cells \ldots 
+\item [struct] structure arrays. Like cell arrays but with names.
+\item [table] tables of heterogeneous but tabular data: Columns must have the same number of rows. Think ``spreadsheet''. \emph{New data format from 2013b.}
+\item [categorical] categorical data such as \lstinline{'Good', 'Bad', 'Horrible'}, i.e., data that take on a discrete set of possible values. Plays well with \lstinline{table}. \emph{New data format from 2013b.}
+
+\end{description}
+
+\subsection{MATLAB documentation keywords for data classes}
+The following is a list of search terms related to the \lstinline{cell}, \lstinline{struct}, and  \lstinline{table} data classes. They are titles of individual help-documents and are provided here because the documentation of MATLAB is vast and it can take some time to find the relevant pages. Simply copy and paste the lines into MATLAB's help browser in the program or on the web
+
+\begin{verbatim}
+Access Data in a Cell Array
+Cell Arrays of Character Vectors
+Multilevel Indexing to Access Parts of Cells
+Access Data in a Structure Array
+Cell vs. Struct Arrays
+Create and Work with Tables
+Access Data in a Table
+\end{verbatim}
+And a \href{http://ch.mathworks.com/videos/tables-and-categorical-arrays-in-release-2013b-101607.html}{video about tables and categorical arrays.}

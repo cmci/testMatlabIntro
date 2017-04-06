@@ -1,0 +1,16 @@
+\begin{lstlisting}[language=matlab]
+%% --- CALCULATE POSITIONS AND SPEEDS ---
+xPos        = cumsum( xSteps ); % positions of particle
+varSteps    = var( xSteps );    % variance of step-distribution
+
+xSpeed      = abs( diff( xPos ) ) / dt; % "speed"
+meanSpeed   = mean( xSpeed );
+stdSpeed    = std( xSpeed );
+
+
+%% --- DISPLAY NUMBERS ---
+disp( ['Average speed = ' num2str( meanSpeed ) ] )
+disp( ['STD speed = ' num2str( stdSpeed ) ] )
+disp( ['VAR steps = ' num2str( varSteps ) ] )
+
+\end{lstlisting}

@@ -1,0 +1,8 @@
+Here, we again used the \lstinline{imread} command, but now with the extra argument \lstinline{'index'} to specify which single image to read --- here we chose image number 7 and displayed the result, again with \lstinline{imshow}.
+Next, we load the entire mri-stack one image at a time. 
+This is done by writing into the three-dimensional array (data-cube) \lstinline{mriStack} using a \lstinline{for}-loop (this concept should already be familiar to you from the ImageJ macro sections).
+We use the colon-notation to let MATLAB know that it should assign as many rows and columns as necessary to fit the images.
+The \lstinline{implay} command is very much like in ImageJ.
+
+Finally, we want to create a montage. 
+This requires one additional step because we are working on single-channel data as opposed to RGB images:

@@ -1,0 +1,12 @@
+\begin{lstlisting}[language=matlab]
+%% --- PLOT HISTOGRAM OF STEPS ---
+figure; hold on; clf
+binNumber = floor( sqrt( stepNumber ) );
+histogram( xSteps, binNumber )
+xlabel( 'Steps [AU]', 'fontsize', fs  )
+ylabel( 'Count', 'fontsize', fs  )
+title( 'Histogram of step-sizes', 'fontsize', fs  )
+set( gca, 'xlim', [-4 4] ) 
+set( gca, 'fontsize', fs ) % size of numbers on the axes
+
+\end{lstlisting}

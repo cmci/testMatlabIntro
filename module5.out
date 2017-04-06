@@ -1,0 +1,40 @@
+\BOOKMARK [1][-]{section.5.1}{Aim}{}% 1
+\BOOKMARK [1][-]{section.5.2}{Tools}{}% 2
+\BOOKMARK [2][-]{subsection.5.2.1}{MATLAB}{section.5.2}% 3
+\BOOKMARK [2][-]{subsection.5.2.2}{Image Processing Toolbox}{section.5.2}% 4
+\BOOKMARK [2][-]{subsection.5.2.3}{Statistics and Machine Learning Toolbox}{section.5.2}% 5
+\BOOKMARK [1][-]{section.5.3}{Getting Started with MATLAB}{}% 6
+\BOOKMARK [2][-]{subsection.5.3.1}{Baby steps}{section.5.3}% 7
+\BOOKMARK [2][-]{subsection.5.3.2}{Plot something}{section.5.3}% 8
+\BOOKMARK [2][-]{subsection.5.3.3}{Make it pretty}{section.5.3}% 9
+\BOOKMARK [2][-]{subsection.5.3.4}{Getting help}{section.5.3}% 10
+\BOOKMARK [1][-]{section.5.4}{Working with images}{}% 11
+\BOOKMARK [2][-]{subsection.5.4.1}{Reading and displaying an image}{section.5.4}% 12
+\BOOKMARK [2][-]{subsection.5.4.2}{Extracting meta-data from an image}{section.5.4}% 13
+\BOOKMARK [2][-]{subsection.5.4.3}{Reading and displaying an image-stack}{section.5.4}% 14
+\BOOKMARK [2][-]{subsection.5.4.4}{Smoothing, thresholding and all that}{section.5.4}% 15
+\BOOKMARK [1][-]{section.5.5}{Automating it}{}% 16
+\BOOKMARK [2][-]{subsection.5.5.1}{Create, save, and run scripts}{section.5.5}% 17
+\BOOKMARK [2][-]{subsection.5.5.2}{Code folding and block-wise execution}{section.5.5}% 18
+\BOOKMARK [2][-]{subsection.5.5.3}{Scipts, programs, functions \204 nomenclature}{section.5.5}% 19
+\BOOKMARK [2][-]{subsection.5.5.4}{Read from a folder}{section.5.5}% 20
+\BOOKMARK [2][-]{subsection.5.5.5}{Path and file names}{section.5.5}% 21
+\BOOKMARK [1][-]{section.5.6}{Time-series analysis}{}% 22
+\BOOKMARK [2][-]{subsection.5.6.1}{Simulating a time-series of Brownian motion \(random walk\)}{section.5.6}% 23
+\BOOKMARK [2][-]{subsection.5.6.2}{Plotting a time-series}{section.5.6}% 24
+\BOOKMARK [2][-]{subsection.5.6.3}{Histograms}{section.5.6}% 25
+\BOOKMARK [2][-]{subsection.5.6.4}{Codehygiene}{section.5.6}% 26
+\BOOKMARK [2][-]{subsection.5.6.5}{Smoothing \(filtering\) a time-series}{section.5.6}% 27
+\BOOKMARK [2][-]{subsection.5.6.6}{Sub-sampling a time-series \(slicing and accessing data\)}{section.5.6}% 28
+\BOOKMARK [2][-]{subsection.5.6.7}{Investigating how ``speed'' depends on subsampling or dt}{section.5.6}% 29
+\BOOKMARK [2][-]{subsection.5.6.8}{Simulating confined Brownian motion}{section.5.6}% 30
+\BOOKMARK [2][-]{subsection.5.6.9}{Simulating directed motion with random tracking error}{section.5.6}% 31
+\BOOKMARK [2][-]{subsection.5.6.10}{Loading tracking data from a file}{section.5.6}% 32
+\BOOKMARK [1][-]{section.5.7}{MSD \204 Mean Square Displacement}{}% 33
+\BOOKMARK [2][-]{subsection.5.7.1}{MSD \204 linear motion}{section.5.7}% 34
+\BOOKMARK [2][-]{subsection.5.7.2}{MSD \204 Brownian motion}{section.5.7}% 35
+\BOOKMARK [2][-]{subsection.5.7.3}{MSD \204 averaged over many tracks}{section.5.7}% 36
+\BOOKMARK [2][-]{subsection.5.7.4}{Further reading about diffusion, the MSD, and power-laws}{section.5.7}% 37
+\BOOKMARK [1][-]{section.5.8}{Appendix: MATLAB Fundamental Data Classes}{}% 38
+\BOOKMARK [2][-]{subsection.5.8.1}{MATLAB documentation keywords for data classes}{section.5.8}% 39
+\BOOKMARK [1][-]{section.5.9}{Appendix: Miscellaneous MATLAB tricks}{}% 40

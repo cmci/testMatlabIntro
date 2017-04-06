@@ -1,0 +1,29 @@
+A script like the one in Fig.~\ref{fig:theEditor} can be run in several ways: 1) You can click on the big green triangle called ``run'' in Editor tab; 2) Your can hit $F5$ when your cursor is in the editor window; or 3) You can call the script by name from the command line, in this case simply type \lstinline{myFirstScript} and hit return.  The first two options will first save any changes to your script, then execute it. The third option will execute the version that is saved to disk when you call it.  If a script has unsaved changes an asterisk appears next to its name in the tab.
+
+When you save a script, please give it a meaningful name --- ``script5.m'' is not a good name even if you intend to never use it again (if it is temporary call it ``scratch5.m'' or ``deleteMe5.m''). Make it descriptive and use underscores or camel-back notation as in ``my\_first\_script.m'' or ``myFirstScript.m''. The same goes for variable names.
+
+\subsection{Code folding and block-wise execution}
+As you will have noticed, in the screenshot of the editor, the lines of codes are split into paragraphs separated by lines that start with two percent signs and a blank space.  All the code between two such lines is called a code-block.  These code-blocks can be folded by clicking on the little square with a minus in it on the left (or use the keyboard shortcut \lstinline{command-.}, to unfold do \lstinline{shift-command-.}). This is very useful when your code grows.
+
+You can quickly navigate between code-blocks with \lstinline{command-arrow-up/down} and once your cursor is in a code-block you are interested in you can execute that entire block with \lstinline{command-return}.  Alternatively, you can select (double-click or click-drag) code and execute it with \lstinline{F7}.  For all of these actions you will see the code appearing and attempting to execute in the command window.
+
+A list of keyboard shortcuts as well as settings for code-folding can be found in the preference settings, via the \lstinline{command-,} shortcut, as always, on a mac.  What is it on a PC?
+
+\subsection{Scipts, programs, functions --- nomenclature}
+Is it a script or a program?  It depends!
+Traditionally only compiled languages like C, C++, Fortran, and Java are referred to as programming languages.
+Whereas languages such as JavaScript and Perl, that are not compiled, were called scripting languages. 
+Then there is Python, sitting somewhere in between.
+MATLAB also is in between, \href{http://ch.mathworks.com/help/matlab/matlab_prog/scripts-and-functions.html}{here} it what the MathWorks have to say about it
+
+\begin{quote}
+Program files can be scripts that simply execute a series of MATLAB statements, or they can be functions that also accept input arguments and produce output. Both scripts and functions contain MATLAB code, and both are stored in text files with a .m extension. However, functions are more flexible and more easily extensible.
+\end{quote}
+
+Ok, so when we save our creations to an \lstinline{m}-file (a file with extension .m) we call it a program file.
+But the thing we saved was either a script or a function, or perhaps a new class definition.
+We shall use the word ``program'' to refer to both scripts and functions, basically whatever we have in the editor, but may occasionally specify which of the two we have in mind if it makes things clearer.
+
+\subsection{Read from a folder}
+To get a list of files in a folder you have several options: 1) Navigate MATLAB to the folder (by clicking or using the \lstinline{cd} command) and type \lstinline{ls} or \lstinline{dir}; 2)
+Give the \lstinline{ls} or \lstinline{dir} command followed by the path to the folder, like this

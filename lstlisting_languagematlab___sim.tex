@@ -1,0 +1,12 @@
+\begin{lstlisting}[language=matlab]
+% --- simple smoothing ---
+xPosSmoothed = smooth( xPos ); % defaults to moving average over 5 data points
+
+% --- sophisticated smoothing ---
+span   = 7;         % number of data points to average over
+method = 'sgolay' ; % Savitsky-Golay filter
+degree = 3;         % the order of the s-g filter
+
+xPosSmoothed = smooth( xPos, span, method, degree );
+
+\end{lstlisting}

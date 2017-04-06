@@ -1,0 +1,7 @@
+\begin{lstlisting}[language=matlab]
+>> labels = bwlabel( blobs_bw );
+>> statsGrayscale = regionprops( labels, blobs_inv, 'meanintensity');
+>> meanIntensity = cat( 1, statsGrayscale.MeanIntensity );
+>> figure(3); text( centroids(:,1) - 10, centroids(:,2), num2str( meanIntensity, 4 ), 'color', 'blue', 'fontsize', 14)
+
+\end{lstlisting}

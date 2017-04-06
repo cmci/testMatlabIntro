@@ -1,0 +1,26 @@
+\begin{lstlisting}[language=matlab]
+function msd_tau = fun_msd_at_tau(x,y,tau)
+
+% fun_msd_vs_tau FUNCTION
+% GIVEN INPUT DATA 'X', 'Y' THIS FUNCTION RETURNS THE
+% MEAN-SQUARED-DISPLACEMENT CALCULALTED IN OVERLAPPING WINDOWS
+% FOR THE FIXED TIMELAG VALUE 'tau'
+% NB: THIS IS FOR A SINGLE TIMELAG ONLY BUT AVERAGED OVER THE ENTIRE TRACK
+
+% 2016-06-03, sfn, created
+
+%% --- INITIALIZE ---
+N   = length( x );            % number of postions determined
+dr2  = zeros( 1, N - tau );   % initialize and speed up procedure
+
+%% --- CALCULATE THE MSD AT A SINGLE TIMELAG ---
+for t = 1 : N - tau
+    dx2         = ( x( t + tau ) - x( t ) ).^2; % squared x-displacement
+    dy2         = ( y( t + tau ) - y( t ) ).^2; % squared y-displacement
+    
+    dr2( t )    = dx2 + dy2;                    % store the squared x-y-displacement for each postion of the sliding window
+end
+
+msd_tau     = mean( dr2 ); % The mean of the squared displacements calculated in sliding windows
+
+\end{lstlisting}

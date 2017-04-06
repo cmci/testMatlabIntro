@@ -1,0 +1,12 @@
+\subsection{Smoothing, thresholding and all that}
+Yes, of course we can perform all these operations and here is a small taste of how it is done.
+We are going to
+
+\begin{enumerate}
+\item Load an image and invert it
+\item Create a copy of it that has been smoothed with a Gaussian kernel
+\item Determine the Otsu threshold for this copy
+\item Create a binary image based on the smoothed copy
+\item Display the mask on the original
+\item Apply this mask (binary image) to the original and make measurements
+\end{enumerate}

@@ -1,0 +1,4 @@
+In this code-example you should notice that we declared a \lstinline{function}, used the command \lstinline{zeros} to pre-allocate memory hence speed up the procedure, and squared each element in a vector with the \lstinline{.^} operator which should not be confused with the \lstinline{^} operator that would have attempted to form the inner product of the vector with itself (and fail).
+A function is much like a normal script except that it is blind and mute: I doesn't see the variables in your workspace and whatever variables are defined inside of the function are not visible from the workspace either.  The only way to get data into the function is to feed it explicitly as input, here as \lstinline{x}, \lstinline{y}, and \lstinline{tau}. The only data that gets out is that explicitly stated as output, here \lstinline{msd_tau}.
+
+Using this function we can now calculate the MSD for a range of time-lags using a for loop

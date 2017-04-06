@@ -1,0 +1,9 @@
+Repeat above analysis for this new time-series.
+How does the speed determination depend on the degree of smoothing, sub-sampling, or $dt$?
+Here, the concept of speed does make sense, and averaging over time (smoothing) should give a better determination.
+
+\subsection{Loading tracking data from a file}
+Instead of analyzing simulated data we often want to work on actual experimental data.
+Our example today is the data generated in ImageJ when tracking spots in cells.
+That output was an XML file and we need a parser (reader) for it called \lstinline{importtrackmatetracks.m}.
+This function will return a cell-array of tracks consisting of time, x, y, and z positions:
